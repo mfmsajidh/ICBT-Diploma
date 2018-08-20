@@ -1,0 +1,107 @@
+<html>
+<head>
+<title> Application Form </title>
+</head>
+<body>
+
+<script language="javascript">
+
+function check(){
+	if(formapp.txtna.value==""){
+		window.alert("Please Enter Your Name!");
+		formapp.txtna.focus();
+		return false;
+		}
+	
+	else if(!isNaN(parseInt(formapp.txtna.value))){
+	window.alert("Please Input a Name With No Number");
+	formapp.txtna.focus();
+	return false;
+	}
+	
+	else if(formapp.txtadd.value==""){
+		window.alert("Please Enter Your Address!");
+		formapp.txtadd.focus();
+		return false;
+		}
+	
+	else if(formapp.txtpass.value==""||formapp.txtpass.value.length<6||formapp.txtpass.value.length>6){
+		window.alert("Please Enter Your Password OR Password Should Be Six Characters!");
+		formapp.txtpass.focus();
+		return false;
+		}
+		
+	else if(formapp.txtrepass.value==""||formapp.txtpass.value!=formapp.txtrepass.value){
+		window.alert("Please Retype Your Password Again OR Password isn't Valid!");
+		formapp.txtrepass.focus();
+		return false;
+		}
+		
+	else if(formapp.txttel.value==""||formapp.txttel.value.length<10||formapp.txttel.value.length>10){
+		window.alert("Please Enter Your Telephone Number OR Telephone Number Should Be Ten Characters!");
+		formapp.txttel.focus();
+		return false;
+		}
+	
+	else if(formapp.txtemail.value==""){
+		window.alert("Please Enter Your Email!");
+		formapp.txtemail.focus();
+		return false;
+		}	
+}
+
+
+function clear2(){
+	formapp.txtna.value="";
+	formapp.txtadd.value="";
+	formapp.txtpass.value="";
+	formapp.txtrepass.value="";
+	formapp.txttel.value="";
+	formapp.txtemail.value="";
+}
+
+</script>
+
+<form name="formapp" method="post" onSubmit="return check()">
+<table border="1">
+
+<tr>
+<td>Name:</td>
+<td><input type="text" name="txtna"></td>
+</tr>
+
+<tr>
+<td>Address:</td>
+<td><input type="text" name="txtadd"></td>
+</tr>
+
+<tr>
+<td>Password:</td>
+<td><input type="password" name="txtpass"></td>
+</tr>
+
+<tr>
+<td>Retype Password:</td>
+<td><input type="password" name="txtrepass"></td>
+</tr>
+
+<tr>
+<td>Telephone No:</td>
+<td> <input type="text" name="txttel"></td>
+</tr>
+
+<tr>
+<td>Email Address:</td>
+<td> <input type="text" name="txtemail"></td>
+</tr>
+
+<tr align="center">
+<td colspan="2"><input name="submit" type="submit" id="submit" value="Submit"> &nbsp; &nbsp; &nbsp;
+				<input name="clear" type="button" id="clear" value="Clear" onClick="clear2()"></td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>

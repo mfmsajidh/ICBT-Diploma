@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+
+<script language="javascript">
+function calculate(a){
+
+t1=parseInt(form1.txtn1.value);
+t2=parseInt(form1.txtn2.value);
+
+if (a==1){
+tot=t1+t2;
+form1.txtans.value=tot;
+} 
+
+if (a==2){
+div=t1/t2;
+form1.txtans.value=div;
+} 
+
+if (a==3){
+mul=t1*t2;
+form1.txtans.value=mul;
+} 
+}
+
+
+function clear(){
+form1.txtn1.value="";
+form1.txtn2.value="";
+form1.txtans.value="";
+}
+
+</script>
+
+
+
+<form name="form1" method="post" action="">
+  <p>&nbsp;</p>
+  <table width="342" border="1" align="center">
+    <tr>
+      <td colspan="2">Enter Number1: </td>
+      <td colspan="2"><input name="txtn1" type="text" id="txtn1"></td>
+    </tr>
+    <tr>
+      <td colspan="2">Enter Number2: </td>
+      <td colspan="2"><input name="txtn2" type="text" id="txtn2"></td>
+    </tr>
+    <tr>
+      <td colspan="2">Answer</td>
+      <td colspan="2"><input name="txtans" type="text" id="txtans"></td>
+    </tr>
+    <tr>
+      <td width="70"><input type="button" name="Submit" value="Addition" onClick="calculate(1)"></td>
+      <td width="76"><input type="button" name="Submit2" value="Division" onClick="calculate(2)"></td>
+      <td width="87"><input type="button" name="Submit3" value="Multipication" onClick="calculate(3)"></td>
+      <td width="81"><input type="reset" name="Submit4" value="Clear" onClick="clear()"></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
